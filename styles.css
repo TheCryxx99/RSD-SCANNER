@@ -1,0 +1,86 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.camara {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.botones-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+button {
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    font-size: 16px;
+}
+
+#iniciarDenuevoBtn,
+#cambiarCamaraBtn {
+    width: 150px;
+    height: 40px;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+#resultado.aprobado {
+    color: black;
+    background-color: rgba(0, 255, 0, 0.8);
+    padding: 160px;
+}
+
+#resultado.rechazado {
+    color: black;
+    background-color: rgba(255, 0, 0, 0.8);
+    padding: 160px;
+}
+
+#resultado.escaneando {
+    color: black;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+  position: center
+    width:150; /* Asegura que el fondo blanco cubra toda la pantalla */
+    height: 200; /* Asegura que el fondo blanco cubra toda la pantalla */
+}
+
+#resultado.escaneando::after {
+ 
+    content: "Espera unos segundos.";
+    font-size: 14px;
+    display: block;
+   padding: 160px;
+    margin-top: 20px;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Escáner de QR</title>
+</head>
+<body>
+    <div class="container">
+        <video id="camara" class="camara" autoplay playsinline></video>
+        <div class="botones-container">
+            <button id="escanearCedulaBtn" onclick="escanear('APROBADO')">VER AFORO</button>
+            <button id="escanearListaBtn" onclick="escanear('RECHAZADO')">ESCANEAR EN LISTA</button>
+            <div id="resultado"></div>
+            <button id="iniciarDenuevoBtn" onclick="volverAlMenu()">Iniciar de Nuevo</button>
+            <button id="cambiarCamaraBtn" onclick="cambiarCamara()">Cambiar Cámara</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
